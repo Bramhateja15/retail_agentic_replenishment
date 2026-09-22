@@ -1,0 +1,23 @@
+project:
+  name: "retail_agentic_replenishment"
+  phase: "data_foundation"
+
+freshretailnet:
+  hf_dataset_id: "Dingdong-Inc/FreshRetailNet-50K"
+
+gdelt:
+  source: "https://www.gdeltproject.org/data.html"
+  # date_range will be set in Phase C once FreshRetailNet's actual
+  # coverage is confirmed by inspection — do not fill this in early.
+  start_date: null
+  end_date: null
+
+notes:
+  - "GDELT is a curated, publicly documented database, not an
+     unstructured source. Its raw event/GKG files are multi-field
+     and semi-structured, requiring parsing, validation, extraction
+     and aggregation before use — that is the basis for describing
+     it as requiring substantial preparation, not a claim that the
+     source itself is unstructured."
+  - "FreshRetailNet is the primary operational dataset; GDELT is
+     external daily context. Integration is by date only."

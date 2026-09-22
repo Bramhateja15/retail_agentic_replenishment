@@ -1,37 +1,70 @@
+# ============================================================
 # Virtual environment
+# ============================================================
+
 .venv/
 __pycache__/
 *.pyc
 
+
+# ============================================================
 # Data layers — never commit actual data
-data/raw/*
+# ============================================================
+
+# FreshRetailNet raw data
+data/raw/freshretailnet/*
+
+# GDELT raw data
+data/raw/gdelt/*
+
+# Keep raw directory placeholders
+!data/raw/freshretailnet/.gitkeep
+!data/raw/gdelt/.gitkeep
+
+# Cleaned data
 data/cleaned/*
+
+# Processed data
 data/processed/*
 
 # Keep directory placeholders
-!data/raw/
-!data/raw/freshretailnet/
-!data/raw/freshretailnet/.gitkeep
-!data/raw/gdelt/
-!data/raw/gdelt/.gitkeep
-
-!data/cleaned/
 !data/cleaned/.gitkeep
-
-!data/processed/
 !data/processed/.gitkeep
 
-# Results — don't commit actual result files
-results/*
-!results/
-!results/metadata/
+
+# ============================================================
+# Results — ignore generated outputs except provenance records
+# ============================================================
+
+# Metadata
+results/metadata/*
+
+# Keep directory placeholder
 !results/metadata/.gitkeep
-!results/validation/
+
+# Track provenance manifests
+!results/metadata/*_manifest.json
+
+# Validation outputs
+results/validation/*
+
+# Keep directory placeholder
 !results/validation/.gitkeep
 
+# Track small validation reports
+!results/validation/*_report.json
+
+
+# ============================================================
 # Environment secrets
+# ============================================================
+
 .env
 
-# OS/editor
+
+# ============================================================
+# Operating system / editor files
+# ============================================================
+
 .DS_Store
 .vscode/

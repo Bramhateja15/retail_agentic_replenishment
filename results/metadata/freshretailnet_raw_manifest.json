@@ -1,0 +1,24 @@
+{
+  "dataset": "Dingdong-Inc/FreshRetailNet-50K",
+  "source_method": "huggingface_hub.snapshot_download",
+  "revision_sha": "08c1fab7f9257bc73679d415d65d644165d351d4",
+  "downloaded_at_utc": "2026-09-22T14:30:38.472001+00:00",
+  "local_path": "C:\\Masters Project\\retail_agentic_replenishment\\data\\raw\\freshretailnet",
+  "file_count": 14,
+  "files": [
+    ".cache\\huggingface\\.gitignore",
+    ".cache\\huggingface\\CACHEDIR.TAG",
+    ".cache\\huggingface\\download\\.gitattributes.metadata",
+    ".cache\\huggingface\\download\\.gitignore.metadata",
+    ".cache\\huggingface\\download\\README.md.metadata",
+    ".cache\\huggingface\\download\\data\\eval.parquet.metadata",
+    ".cache\\huggingface\\download\\data\\train.parquet.metadata",
+    ".cache\\huggingface\\trees\\08c1fab7f9257bc73679d415d65d644165d351d4.json",
+    ".gitattributes",
+    ".gitignore",
+    ".gitkeep",
+    "README.md",
+    "data\\eval.parquet",
+    "data\\train.parquet"
+  ]
+}

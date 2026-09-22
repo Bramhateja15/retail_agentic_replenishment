@@ -1,0 +1,20 @@
+{
+  "source": "GDELT 2.0 GKG",
+  "base_url": "http://data.gdeltproject.org/gdeltv2",
+  "date_range_start": "2024-03-28",
+  "date_range_end": "2024-07-02",
+  "date_range_resolution_method": "auto_detected_from_column:dt",
+  "buffer_days": 3,
+  "snapshot_times": [
+    "000000",
+    "060000",
+    "120000",
+    "180000"
+  ],
+  "downloaded_at_utc": "2026-09-22T22:00:33.926211+00:00",
+  "planned_count": 412,
+  "succeeded_count": 412,
+  "skipped_already_present_count": 0,
+  "failed_count": 0,
+  "failed_details": []
+}
