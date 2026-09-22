@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Data layers — never commit actual data
+data/raw/*
+data/cleaned/*
+data/processed/*
+
+# Keep directory placeholders
+!data/raw/
+!data/raw/freshretailnet/
+!data/raw/freshretailnet/.gitkeep
+!data/raw/gdelt/
+!data/raw/gdelt/.gitkeep
+
+!data/cleaned/
+!data/cleaned/.gitkeep
+
+!data/processed/
+!data/processed/.gitkeep
+
+# Results — don't commit actual result files
+results/*
+!results/
+!results/metadata/
+!results/metadata/.gitkeep
+!results/validation/
+!results/validation/.gitkeep
+
+# Environment secrets
+.env
+
+# OS/editor
+.DS_Store
+.vscode/
