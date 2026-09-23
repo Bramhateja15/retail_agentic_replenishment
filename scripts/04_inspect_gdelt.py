@@ -18,6 +18,16 @@ Read-only inspection of the raw .csv.zip files. Two passes:
 
 Nothing is cleaned, filtered, or written back to data/raw/.
 
+Important finding:-
+The structural pass found the outer 27-field TSV structure to be
+fully well-formed across the sample, with 0 malformed rows and
+0 invalid DATE fields. Therefore, the preparation requirement for
+GDELT is not based on row-level corruption. Instead, the content
+fields such as V2Themes, V2Locations, V2Persons and V2Organizations
+contain compound, multi-valued encodings that require deliberate
+parsing, extraction and aggregation before they can be used as
+structured analytical features.
+
 Run:
     python scripts/04_inspect_gdelt.py
 """
