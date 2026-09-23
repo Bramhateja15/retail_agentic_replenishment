@@ -54,6 +54,15 @@ results/validation/*
 # Track small validation reports
 !results/validation/*_report.json
 
+# Inspection outputs
+results/inspection/*
+
+# Keep directory placeholder
+!results/inspection/.gitkeep
+
+# Track inspection reports
+!results/inspection/*_report.json
+
 
 # ============================================================
 # Environment secrets

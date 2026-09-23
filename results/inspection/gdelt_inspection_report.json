@@ -1,0 +1,100 @@
+{
+  "generated_at_utc": "2026-09-22T23:59:40.181821+00:00",
+  "gkg_reference_schema": [
+    "GKGRECORDID",
+    "DATE",
+    "SourceCollectionIdentifier",
+    "SourceCommonName",
+    "DocumentIdentifier",
+    "Counts",
+    "V2Counts",
+    "Themes",
+    "V2Themes",
+    "Locations",
+    "V2Locations",
+    "Persons",
+    "V2Persons",
+    "Organizations",
+    "V2Organizations",
+    "V2Tone",
+    "Dates",
+    "GCAM",
+    "SharingImage",
+    "RelatedImages",
+    "SocialImageEmbeds",
+    "SocialVideoEmbeds",
+    "Quotations",
+    "AllNames",
+    "Amounts",
+    "TranslationInfo",
+    "Extras"
+  ],
+  "integrity_pass": {
+    "total_files": 412,
+    "files_failing_to_open": 0,
+    "files_zero_bytes_uncompressed": 0
+  },
+  "structural_pass": {
+    "files_sampled": 103,
+    "files_parsed_ok": 103,
+    "files_unreadable": 0,
+    "total_rows_in_sample": 151123,
+    "field_count_distribution": {
+      "27": 151123
+    },
+    "expected_field_count": 27,
+    "rows_matching_expected_field_count": 151123,
+    "date_field_valid_rows": 151123,
+    "date_field_invalid_rows": 0,
+    "content_field_nonempty_row_counts": {
+      "V2Themes": 135370,
+      "V2Persons": 117949,
+      "V2Organizations": 108671,
+      "V2Tone": 151123,
+      "V2Locations": 111267
+    },
+    "per_file_row_counts_sample": [
+      {
+        "file": "20240325\\20240325000000.gkg.csv.zip",
+        "rows": 857
+      },
+      {
+        "file": "20240326\\20240326000000.gkg.csv.zip",
+        "rows": 1660
+      },
+      {
+        "file": "20240327\\20240327000000.gkg.csv.zip",
+        "rows": 1664
+      },
+      {
+        "file": "20240328\\20240328000000.gkg.csv.zip",
+        "rows": 1801
+      },
+      {
+        "file": "20240329\\20240329000000.gkg.csv.zip",
+        "rows": 1613
+      },
+      {
+        "file": "20240330\\20240330000000.gkg.csv.zip",
+        "rows": 1383
+      },
+      {
+        "file": "20240331\\20240331000000.gkg.csv.zip",
+        "rows": 761
+      },
+      {
+        "file": "20240401\\20240401000000.gkg.csv.zip",
+        "rows": 842
+      },
+      {
+        "file": "20240402\\20240402000000.gkg.csv.zip",
+        "rows": 1614
+      },
+      {
+        "file": "20240403\\20240403000000.gkg.csv.zip",
+        "rows": 1757
+      }
+    ]
+  },
+  "sampling_method": "one file per day (00:00 UTC snapshot), 103 of 412 total raw files"
+}

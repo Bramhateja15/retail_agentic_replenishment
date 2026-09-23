@@ -25,6 +25,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 RESULTS_DIR = PROJECT_ROOT / "results"
 METADATA_DIR = RESULTS_DIR / "metadata"
 VALIDATION_DIR = RESULTS_DIR / "validation"
+INSPECTION_DIR = RESULTS_DIR / "inspection"
 
 # --- Ensure directories exist (idempotent, safe to call repeatedly) ---
 def ensure_dirs():
@@ -35,16 +36,18 @@ def ensure_dirs():
         PROCESSED_DIR,
         METADATA_DIR,
         VALIDATION_DIR,
+        INSPECTION_DIR,
     ]:
         d.mkdir(parents=True, exist_ok=True)
 
 
 if __name__ == "__main__":
     ensure_dirs()
-    print(f"PROJECT_ROOT        = {PROJECT_ROOT}")
+    print(f"PROJECT_ROOT         = {PROJECT_ROOT}")
     print(f"RAW_FRESHRETAILNET   = {RAW_FRESHRETAILNET_DIR}")
     print(f"RAW_GDELT            = {RAW_GDELT_DIR}")
     print(f"CLEANED_DIR          = {CLEANED_DIR}")
     print(f"PROCESSED_DIR        = {PROCESSED_DIR}")
     print(f"METADATA_DIR         = {METADATA_DIR}")
     print(f"VALIDATION_DIR       = {VALIDATION_DIR}")
+    print(f"INSPECTION_DIR       = {INSPECTION_DIR}")
