@@ -1,0 +1,496 @@
+{
+  "project": "retail_agentic_replenishment",
+  "purpose": "Data quality profiling of cleaned datasets",
+  "freshretailnet": {
+    "summary": [
+      {
+        "Dataset": "Train",
+        "Rows": 4500000,
+        "Columns": 20,
+        "Null Values": 0,
+        "Duplicate Keys": 0,
+        "Min Date": "2024-03-28T00:00:00",
+        "Max Date": "2024-06-25T00:00:00"
+      },
+      {
+        "Dataset": "Eval",
+        "Rows": 350000,
+        "Columns": 20,
+        "Null Values": 0,
+        "Duplicate Keys": 0,
+        "Min Date": "2024-06-26T00:00:00",
+        "Max Date": "2024-07-02T00:00:00"
+      }
+    ],
+    "column_profile": [
+      {
+        "Column": "city_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 18
+      },
+      {
+        "Column": "store_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 898
+      },
+      {
+        "Column": "management_group_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 7
+      },
+      {
+        "Column": "first_category_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 32
+      },
+      {
+        "Column": "second_category_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 84
+      },
+      {
+        "Column": "third_category_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 233
+      },
+      {
+        "Column": "product_id",
+        "Data Type": "int64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 865
+      },
+      {
+        "Column": "dt",
+        "Data Type": "datetime64[us]",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 90
+      },
+      {
+        "Column": "sale_amount",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 1363
+      },
+      {
+        "Column": "hours_sale",
+        "Data Type": "object",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": "24-value array"
+      },
+      {
+        "Column": "stock_hour6_22_cnt",
+        "Data Type": "int32",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 17
+      },
+      {
+        "Column": "hours_stock_status",
+        "Data Type": "object",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": "24-value array"
+      },
+      {
+        "Column": "discount",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 2600
+      },
+      {
+        "Column": "holiday_flag",
+        "Data Type": "int32",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 2
+      },
+      {
+        "Column": "activity_flag",
+        "Data Type": "int32",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 2
+      },
+      {
+        "Column": "precpt",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 40117
+      },
+      {
+        "Column": "avg_temperature",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 1582
+      },
+      {
+        "Column": "avg_humidity",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 4817
+      },
+      {
+        "Column": "avg_wind_level",
+        "Data Type": "float64",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 247
+      },
+      {
+        "Column": "discount_above_reference",
+        "Data Type": "bool",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 2
+      }
+    ],
+    "validation_checks": [
+      {
+        "Dataset": "Train",
+        "Check": "Missing values",
+        "Result": 0
+      },
+      {
+        "Dataset": "Eval",
+        "Check": "Missing values",
+        "Result": 0
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Duplicate composite keys",
+        "Result": 0
+      },
+      {
+        "Dataset": "Eval",
+        "Check": "Duplicate composite keys",
+        "Result": 0
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Invalid array lengths",
+        "Result": 0
+      },
+      {
+        "Dataset": "Eval",
+        "Check": "Invalid array lengths",
+        "Result": 0
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Discount > 1.0",
+        "Result": 34
+      },
+      {
+        "Dataset": "Eval",
+        "Check": "Discount > 1.0",
+        "Result": 0
+      }
+    ]
+  },
+  "gdelt": {
+    "summary": [
+      {
+        "Dataset": "GDELT Cleaned",
+        "Rows": 606981,
+        "Columns": 35,
+        "Null Values": 0,
+        "Duplicate GKG IDs": 0,
+        "Min Date": "2024-03-25T00:00:00+00:00",
+        "Max Date": "2024-07-05T18:00:00+00:00"
+      }
+    ],
+    "column_profile": [
+      {
+        "Column": "gkg_record_id",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 606981
+      },
+      {
+        "Column": "gkg_date_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 412
+      },
+      {
+        "Column": "gkg_datetime_utc",
+        "Data Type": "datetime64[us, UTC]",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 412
+      },
+      {
+        "Column": "source_collection_id",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 1
+      },
+      {
+        "Column": "source_common_name",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 11852
+      },
+      {
+        "Column": "document_identifier",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 606981
+      },
+      {
+        "Column": "v1_counts_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 47922
+      },
+      {
+        "Column": "v2_counts_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 60762
+      },
+      {
+        "Column": "v1_themes_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 405396
+      },
+      {
+        "Column": "v2_themes_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 522237
+      },
+      {
+        "Column": "v1_locations_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 254855
+      },
+      {
+        "Column": "v2_locations_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 404031
+      },
+      {
+        "Column": "v1_persons_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 374674
+      },
+      {
+        "Column": "v2_persons_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 416054
+      },
+      {
+        "Column": "v1_organizations_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 308986
+      },
+      {
+        "Column": "v2_organizations_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 379799
+      },
+      {
+        "Column": "v2_enhanced_dates_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 194649
+      },
+      {
+        "Column": "v2_gcam_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 502736
+      },
+      {
+        "Column": "sharing_image_url",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 433693
+      },
+      {
+        "Column": "related_images_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 52738
+      },
+      {
+        "Column": "social_image_embeds_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 35128
+      },
+      {
+        "Column": "social_video_embeds_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 66596
+      },
+      {
+        "Column": "quotations_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 101767
+      },
+      {
+        "Column": "all_names_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 477214
+      },
+      {
+        "Column": "amounts_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 377958
+      },
+      {
+        "Column": "translation_info_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 1
+      },
+      {
+        "Column": "extras_raw",
+        "Data Type": "str",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 535794
+      },
+      {
+        "Column": "tone_average",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 79983
+      },
+      {
+        "Column": "tone_positive",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 47499
+      },
+      {
+        "Column": "tone_negative",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 56342
+      },
+      {
+        "Column": "tone_polarity",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 62859
+      },
+      {
+        "Column": "tone_activity_reference_density",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 72473
+      },
+      {
+        "Column": "tone_self_group_reference_density",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 31680
+      },
+      {
+        "Column": "tone_word_count",
+        "Data Type": "float64",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 4679
+      },
+      {
+        "Column": "v2locations_structurally_valid",
+        "Data Type": "bool",
+        "Non Null": 606981,
+        "Null Count": 0,
+        "Unique Values": 2
+      }
+    ],
+    "validation_checks": [
+      {
+        "Check": "Missing values",
+        "Result": 0
+      },
+      {
+        "Check": "Duplicate GKG IDs",
+        "Result": 0
+      },
+      {
+        "Check": "Invalid datetime values",
+        "Result": 0
+      },
+      {
+        "Check": "Invalid V2Tone rows",
+        "Result": 0
+      },
+      {
+        "Check": "V2Locations structurally flagged",
+        "Result": 307
+      },
+      {
+        "Check": "Source collection IDs outside 1-6",
+        "Result": 0
+      }
+    ]
+  }
+}
