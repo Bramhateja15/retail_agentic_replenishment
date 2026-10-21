@@ -1,0 +1,142 @@
+{
+  "generated_at_utc": "2026-10-21T00:44:02.074740+00:00",
+  "overall_status": "PASS",
+  "input": {
+    "path": "C:\\Masters Project\\retail_agentic_replenishment\\data\\cleaned\\gdelt_cleaned.parquet",
+    "rows_read": 606981,
+    "columns_read": [
+      "gkg_datetime_utc",
+      "document_identifier",
+      "v2_themes_raw",
+      "v2_locations_raw",
+      "tone_average"
+    ]
+  },
+  "method": {
+    "timezone": "Asia/Shanghai",
+    "china_rule": "any V2Locations block with country code 'CH' (HK and TW excluded)",
+    "theme_rule": "exact word match on V2Themes theme names split by '_', plus prefixes, minus exclusions",
+    "theme_groups": {
+      "food": [
+        "AGRICULTURAL",
+        "AGRICULTURE",
+        "CROP",
+        "CROPS",
+        "FARM",
+        "FARMER",
+        "FARMERS",
+        "FARMING",
+        "FISHERIES",
+        "FOOD",
+        "GRAIN",
+        "HARVEST",
+        "LIVESTOCK",
+        "MEAT",
+        "PORK",
+        "RICE",
+        "VEGETABLES"
+      ],
+      "weather": [
+        "CYCLONE",
+        "DROUGHT",
+        "DROUGHTS",
+        "FLOOD",
+        "FLOODING",
+        "FLOODS",
+        "HEATWAVE",
+        "HURRICANE",
+        "LANDSLIDE",
+        "RAINFALL",
+        "SNOW",
+        "STORM",
+        "STORMS",
+        "TYPHOON",
+        "TYPHOONS",
+        "WEATHER"
+      ],
+      "prices": [
+        "COST",
+        "COSTS",
+        "INFLATION",
+        "PRICE",
+        "PRICES",
+        "PRICING"
+      ],
+      "supply": [
+        "FREIGHT",
+        "LOGISTICS",
+        "SHIPPING",
+        "SHORTAGE",
+        "SHORTAGES",
+        "SUPPLIES",
+        "SUPPLY",
+        "TRANSPORT",
+        "TRANSPORTATION"
+      ]
+    },
+    "theme_prefixes": {
+      "weather": [
+        "NATURAL_DISASTER"
+      ]
+    },
+    "theme_exclusions": {
+      "prices": [
+        "ECON_HOUSING_PRICES",
+        "WB_1846_CARBON_PRICING"
+      ],
+      "supply": [
+        "PUBLIC_TRANSPORT"
+      ]
+    },
+    "lag_applied_here": false
+  },
+  "china_articles": {
+    "total_after_dedup": 28510,
+    "duplicates_removed": 0,
+    "share_of_all_records": 0.047,
+    "per_day_mean": 274.1,
+    "per_day_min_in_needed_range": 118
+  },
+  "output": {
+    "days": 104,
+    "first_day": "2024-03-25",
+    "last_day": "2024-07-06",
+    "columns": [
+      "dt",
+      "news_snapshots",
+      "complete_day",
+      "news_all_articles",
+      "news_china_articles",
+      "news_china_share",
+      "news_tone_mean",
+      "news_tone_negative_share",
+      "news_food_share",
+      "news_weather_share",
+      "news_prices_share",
+      "news_supply_share"
+    ],
+    "parquet": "C:\\Masters Project\\retail_agentic_replenishment\\data\\processed\\gdelt_daily_china_features.parquet",
+    "csv": "C:\\Masters Project\\retail_agentic_replenishment\\data\\processed\\gdelt_daily_china_features.csv"
+  },
+  "feature_means_in_needed_range": {
+    "news_china_share": 0.047,
+    "news_tone_mean": -0.6111,
+    "news_tone_negative_share": 0.547,
+    "news_food_share": 0.14,
+    "news_weather_share": 0.1005,
+    "news_prices_share": 0.2775,
+    "news_supply_share": 0.215
+  },
+  "checks": {
+    "needed_range": [
+      "2024-03-27",
+      "2024-07-01"
+    ],
+    "needed_days_expected": 97,
+    "needed_days_present": 97,
+    "needed_days_incomplete_snapshots": [],
+    "needed_days_below_min_china_articles": [],
+    "missing_feature_values_in_needed_range": 0,
+    "shares_outside_0_1": 0
+  }
+}
