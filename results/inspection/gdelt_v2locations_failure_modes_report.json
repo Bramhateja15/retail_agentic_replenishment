@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-10-21T00:18:08.017774+00:00",
+  "files_examined": 412,
+  "rows_examined": 606981,
+  "rows_failing_field_count_only": 307,
+  "rows_failing_location_type_only": 0,
+  "rows_failing_both": 0,
+  "total_affected_rows": 307,
+  "malformed_blocks_field_count": 2850,
+  "malformed_blocks_type_only": 0,
+  "total_malformed_blocks": 2850,
+  "matches_full_corpus_validation": true,
+  "full_corpus_validation_affected_rows": 307
+}

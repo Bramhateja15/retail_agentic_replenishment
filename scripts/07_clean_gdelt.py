@@ -47,6 +47,7 @@ from config.paths import (
     RAW_GDELT_DIR,
     CLEANED_DIR,
     VALIDATION_DIR,
+    INSPECTION_DIR,
     ensure_dirs,
 )
 
@@ -708,6 +709,40 @@ def main():
         / total_rows
     ) * 100
 
+    # Malformed-block total and failure-mode split come from the
+    # 06b diagnostic report (measured, not typed in by hand).
+
+    diag_path = (
+        INSPECTION_DIR
+        / "gdelt_v2locations_failure_modes_report.json"
+    )
+
+    if diag_path.exists():
+
+        with open(diag_path, encoding="utf-8") as f:
+            diag = json.load(f)
+
+        malformed_blocks_text = (
+            f"{diag['total_malformed_blocks']:,} malformed blocks in total, "
+            f"measured by scripts/06b_diagnose_v2locations.py"
+        )
+
+        type_only_text = (
+            f"{diag['rows_failing_location_type_only']} rows failed only "
+            "on invalid Location Type values among nine-field blocks"
+        )
+
+    else:
+
+        malformed_blocks_text = (
+            "malformed block total not available; "
+            "run scripts/06b_diagnose_v2locations.py"
+        )
+
+        type_only_text = (
+            "Location Type failure split not available"
+        )
+
     # -------------------------------------------------------------
     # Validation report
     # -------------------------------------------------------------
@@ -803,18 +838,15 @@ def main():
 
             "note":
                 (
-                    "307 of 606,981 GDELT records "
-                    "(0.0506%) contain one or more "
+                    f"{v2locations_invalid_count:,} of {total_rows:,} GDELT records "
+                    f"({v2locations_affected_pct:.4f}%) contain one or more "
                     "structurally non-conforming "
                     "V2Locations blocks "
-                    "(2,850 malformed blocks in total, "
-                    "confirmed by full-corpus diagnostic). "
-                    "All identified failures are due to "
+                    f"({malformed_blocks_text}). "
+                    "All flagged rows are due to "
                     "field-count deviations from the "
                     "documented nine-field structure; "
-                    "zero additional failures were found "
-                    "among nine-field blocks due to invalid "
-                    "Location Type values. Raw values are "
+                    f"{type_only_text}. Raw values are "
                     "retained unmodified for all affected "
                     "rows. The underlying mechanism producing "
                     "this pattern is not asserted."
@@ -951,4 +983,4 @@ def main():
 # ---------------------------------------------------------------------
 
 if __name__ == "__main__":
-    main()
+    main()

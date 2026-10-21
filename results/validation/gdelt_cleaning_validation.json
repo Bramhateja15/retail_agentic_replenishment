@@ -1,0 +1,96 @@
+{
+  "generated_at_utc": "2026-10-21T00:26:59.577363+00:00",
+  "overall_status": "PASS",
+  "input": {
+    "total_files": 412,
+    "total_rows": 606981
+  },
+  "output": {
+    "path": "C:\\Masters Project\\retail_agentic_replenishment\\data\\cleaned\\gdelt_cleaned.parquet",
+    "rows": 606981,
+    "columns": 35,
+    "column_list": [
+      "gkg_record_id",
+      "gkg_date_raw",
+      "gkg_datetime_utc",
+      "source_collection_id",
+      "source_common_name",
+      "document_identifier",
+      "v1_counts_raw",
+      "v2_counts_raw",
+      "v1_themes_raw",
+      "v2_themes_raw",
+      "v1_locations_raw",
+      "v2_locations_raw",
+      "v1_persons_raw",
+      "v2_persons_raw",
+      "v1_organizations_raw",
+      "v2_organizations_raw",
+      "v2_enhanced_dates_raw",
+      "v2_gcam_raw",
+      "sharing_image_url",
+      "related_images_raw",
+      "social_image_embeds_raw",
+      "social_video_embeds_raw",
+      "quotations_raw",
+      "all_names_raw",
+      "amounts_raw",
+      "translation_info_raw",
+      "extras_raw",
+      "tone_average",
+      "tone_positive",
+      "tone_negative",
+      "tone_polarity",
+      "tone_activity_reference_density",
+      "tone_self_group_reference_density",
+      "tone_word_count",
+      "v2locations_structurally_valid"
+    ]
+  },
+  "validation": {
+    "field_count_27_check": {
+      "hard_fail_count": 0
+    },
+    "gkgrecordid_check": {
+      "hard_fail_count": 0,
+      "unique_count": 606981
+    },
+    "date_check": {
+      "hard_fail_count": 0
+    },
+    "source_collection_identifier_check": {
+      "hard_fail_count": 0,
+      "observed_value_counts": {
+        "1": 606981
+      }
+    },
+    "v2tone_check": {
+      "hard_fail_count": 0
+    }
+  },
+  "v2locations_anomaly": {
+    "affected_rows": 307,
+    "affected_row_percentage": 0.0506,
+    "total_rows": 606981,
+    "note": "307 of 606,981 GDELT records (0.0506%) contain one or more structurally non-conforming V2Locations blocks (2,850 malformed blocks in total, measured by scripts/06b_diagnose_v2locations.py). All flagged rows are due to field-count deviations from the documented nine-field structure; 0 rows failed only on invalid Location Type values among nine-field blocks. Raw values are retained unmodified for all affected rows. The underlying mechanism producing this pattern is not asserted."
+  },
+  "scope_notes": {
+    "fields_preserved": "All 27 raw GKG source fields are represented in the cleaned output; no source field is silently discarded.",
+    "v2tone_transformation": "V2Tone is decomposed into its seven documented numeric components.",
+    "date_transformation": "DATE is preserved as gkg_date_raw and additionally parsed as gkg_datetime_utc.",
+    "fields_structurally_validated": [
+      "GKGRECORDID",
+      "DATE",
+      "SourceCollectionIdentifier",
+      "V2Tone",
+      "V2Themes (corpus-wide, prior script)",
+      "V2Locations (corpus-wide, prior script)",
+      "V2Persons (corpus-wide, prior script)",
+      "V2Organizations (corpus-wide, prior script)"
+    ],
+    "daily_aggregation": "NOT performed \u2014 deferred to Phase F.",
+    "analytical_feature_selection": "NOT performed \u2014 deferred to Phase F.",
+    "row_filtering": "NOT performed.",
+    "raw_data_modification": "NOT performed."
+  }
+}

@@ -7,10 +7,16 @@ freshretailnet:
 
 gdelt:
   source: "https://www.gdeltproject.org/data.html"
-  # date_range will be set in Phase C once FreshRetailNet's actual
-  # coverage is confirmed by inspection — do not fill this in early.
-  start_date: null
-  end_date: null
+  # Confirmed by Phase C inspection: FreshRetailNet train + eval cover
+  # 2024-03-28 to 2024-07-02. These are the values used for the download
+  # recorded in results/metadata/gdelt_raw_manifest.json.
+  start_date: "2024-03-28"
+  end_date: "2024-07-02"
+  buffer_days: 3
+  # 4 of the 96 daily 15-minute GKG files (UTC). In China time (UTC+8)
+  # these are 08:00, 14:00, 20:00 and 02:00 of the next day.
+  snapshot_times: ["000000", "060000", "120000", "180000"]
+  timezone_for_daily_aggregation: "Asia/Shanghai"
 
 notes:
   - "GDELT is a curated, publicly documented database, not an
@@ -21,3 +27,8 @@ notes:
      source itself is unstructured."
   - "FreshRetailNet is the primary operational dataset; GDELT is
      external daily context. Integration is by date only."
+  - "GDELT is a systematic sample (4 of 96 daily files), so daily features
+     must be shares or averages, not raw article counts."
+  - "Leakage rules: no statistic is computed across the train/eval split;
+     the eval split (2024-06-26 to 2024-07-02) is reserved as the final
+     untouched test set; news is joined with a one-day lag."

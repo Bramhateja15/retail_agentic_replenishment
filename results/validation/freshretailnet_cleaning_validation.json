@@ -1,0 +1,208 @@
+{
+  "generated_at_utc": "2026-10-21T00:17:09.316325+00:00",
+  "train": {
+    "split": "train",
+    "path": "C:\\Masters Project\\retail_agentic_replenishment\\data\\raw\\freshretailnet\\data\\train.parquet",
+    "input_rows": 4500000,
+    "input_columns": 19,
+    "unexpected_input_columns": [],
+    "dtype_changes": {
+      "dt": "str -> datetime64[ns]"
+    },
+    "missing_value_check": {
+      "city_id": 0,
+      "store_id": 0,
+      "management_group_id": 0,
+      "first_category_id": 0,
+      "second_category_id": 0,
+      "third_category_id": 0,
+      "product_id": 0,
+      "dt": 0,
+      "sale_amount": 0,
+      "hours_sale": 0,
+      "stock_hour6_22_cnt": 0,
+      "hours_stock_status": 0,
+      "discount": 0,
+      "holiday_flag": 0,
+      "activity_flag": 0,
+      "precpt": 0,
+      "avg_temperature": 0,
+      "avg_humidity": 0,
+      "avg_wind_level": 0
+    },
+    "duplicate_key_check": {
+      "key_columns": [
+        "city_id",
+        "store_id",
+        "product_id",
+        "dt"
+      ],
+      "duplicate_count": 0
+    },
+    "array_length_check": {
+      "hours_sale": {
+        "all_length_24": true,
+        "rows_checked": 4500000
+      },
+      "hours_stock_status": {
+        "all_length_24": true,
+        "rows_checked": 4500000
+      }
+    },
+    "hours_stock_status_value_check": {
+      "observed_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "cross_field_check": {
+      "check": "stock_hour6_22_cnt == sum(hours_stock_status[6:22])",
+      "rows_checked": 4500000,
+      "mismatch_count": 0
+    },
+    "binary_flag_check": {
+      "holiday_flag": [
+        0,
+        1
+      ],
+      "activity_flag": [
+        0,
+        1
+      ]
+    },
+    "non_negativity_check": {
+      "sale_amount": {
+        "negative_count": 0
+      },
+      "discount": {
+        "negative_count": 0
+      },
+      "precpt": {
+        "negative_count": 0
+      }
+    },
+    "discount_anomaly": {
+      "above_reference_count": 34,
+      "zero_discount_count": 16039,
+      "zero_discount_share": 0.003564,
+      "value_unchanged": true,
+      "note": "Values above the documented 1.0 'no discount' reference are retained unchanged; flagged via discount_above_reference. Values of exactly 0.0 (a 100% discount) are retained unchanged; flagged via discount_zero for treatment at feature stage."
+    },
+    "output_rows": 4500000,
+    "output_columns": 21,
+    "row_count_preserved": true,
+    "date_coverage": {
+      "min": "2024-03-28",
+      "max": "2024-06-25",
+      "unique_dates": 90
+    },
+    "expected_row_count_match": true
+  },
+  "eval": {
+    "split": "eval",
+    "path": "C:\\Masters Project\\retail_agentic_replenishment\\data\\raw\\freshretailnet\\data\\eval.parquet",
+    "input_rows": 350000,
+    "input_columns": 19,
+    "unexpected_input_columns": [],
+    "dtype_changes": {
+      "dt": "str -> datetime64[ns]"
+    },
+    "missing_value_check": {
+      "city_id": 0,
+      "store_id": 0,
+      "management_group_id": 0,
+      "first_category_id": 0,
+      "second_category_id": 0,
+      "third_category_id": 0,
+      "product_id": 0,
+      "dt": 0,
+      "sale_amount": 0,
+      "hours_sale": 0,
+      "stock_hour6_22_cnt": 0,
+      "hours_stock_status": 0,
+      "discount": 0,
+      "holiday_flag": 0,
+      "activity_flag": 0,
+      "precpt": 0,
+      "avg_temperature": 0,
+      "avg_humidity": 0,
+      "avg_wind_level": 0
+    },
+    "duplicate_key_check": {
+      "key_columns": [
+        "city_id",
+        "store_id",
+        "product_id",
+        "dt"
+      ],
+      "duplicate_count": 0
+    },
+    "array_length_check": {
+      "hours_sale": {
+        "all_length_24": true,
+        "rows_checked": 350000
+      },
+      "hours_stock_status": {
+        "all_length_24": true,
+        "rows_checked": 350000
+      }
+    },
+    "hours_stock_status_value_check": {
+      "observed_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "cross_field_check": {
+      "check": "stock_hour6_22_cnt == sum(hours_stock_status[6:22])",
+      "rows_checked": 350000,
+      "mismatch_count": 0
+    },
+    "binary_flag_check": {
+      "holiday_flag": [
+        0,
+        1
+      ],
+      "activity_flag": [
+        0,
+        1
+      ]
+    },
+    "non_negativity_check": {
+      "sale_amount": {
+        "negative_count": 0
+      },
+      "discount": {
+        "negative_count": 0
+      },
+      "precpt": {
+        "negative_count": 0
+      }
+    },
+    "discount_anomaly": {
+      "above_reference_count": 0,
+      "zero_discount_count": 1300,
+      "zero_discount_share": 0.003714,
+      "value_unchanged": true,
+      "note": "Values above the documented 1.0 'no discount' reference are retained unchanged; flagged via discount_above_reference. Values of exactly 0.0 (a 100% discount) are retained unchanged; flagged via discount_zero for treatment at feature stage."
+    },
+    "output_rows": 350000,
+    "output_columns": 21,
+    "row_count_preserved": true,
+    "date_coverage": {
+      "min": "2024-06-26",
+      "max": "2024-07-02",
+      "unique_dates": 7
+    },
+    "expected_row_count_match": true
+  },
+  "schema_identity_check": {
+    "train_eval_columns_match": true,
+    "train_eval_dtypes_match": true
+  },
+  "overall_status": "PASS",
+  "output_files": {
+    "train": "C:\\Masters Project\\retail_agentic_replenishment\\data\\cleaned\\freshretailnet_train.parquet",
+    "eval": "C:\\Masters Project\\retail_agentic_replenishment\\data\\cleaned\\freshretailnet_eval.parquet"
+  }
+}

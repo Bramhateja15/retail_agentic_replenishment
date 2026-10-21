@@ -51,8 +51,8 @@ results/validation/*
 # Keep directory placeholder
 !results/validation/.gitkeep
 
-# Track small validation reports
-!results/validation/*_report.json
+# Track all small JSON validation reports (evidence for the dissertation)
+!results/validation/*.json
 
 # Inspection outputs
 results/inspection/*
@@ -60,8 +60,8 @@ results/inspection/*
 # Keep directory placeholder
 !results/inspection/.gitkeep
 
-# Track inspection reports
-!results/inspection/*_report.json
+# Track all small JSON inspection reports (evidence for the dissertation)
+!results/inspection/*.json
 
 
 # ============================================================
@@ -76,4 +76,4 @@ results/inspection/*
 # ============================================================
 
 .DS_Store
-.vscode/
+.vscode/

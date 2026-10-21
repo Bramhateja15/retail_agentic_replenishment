@@ -6,7 +6,7 @@
       {
         "Dataset": "Train",
         "Rows": 4500000,
-        "Columns": 20,
+        "Columns": 21,
         "Null Values": 0,
         "Duplicate Keys": 0,
         "Min Date": "2024-03-28T00:00:00",
@@ -15,7 +15,7 @@
       {
         "Dataset": "Eval",
         "Rows": 350000,
-        "Columns": 20,
+        "Columns": 21,
         "Null Values": 0,
         "Duplicate Keys": 0,
         "Min Date": "2024-06-26T00:00:00",
@@ -162,6 +162,13 @@
         "Non Null": 4500000,
         "Null Count": 0,
         "Unique Values": 2
+      },
+      {
+        "Column": "discount_zero",
+        "Data Type": "bool",
+        "Non Null": 4500000,
+        "Null Count": 0,
+        "Unique Values": 2
       }
     ],
     "validation_checks": [
@@ -203,6 +210,31 @@
       {
         "Dataset": "Eval",
         "Check": "Discount > 1.0",
+        "Result": 0
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Discount == 0.0 (flagged, likely missing)",
+        "Result": 16039
+      },
+      {
+        "Dataset": "Eval",
+        "Check": "Discount == 0.0 (flagged, likely missing)",
+        "Result": 1300
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Stockout hours != sum of hourly flags (6-22)",
+        "Result": 0
+      },
+      {
+        "Dataset": "Train",
+        "Check": "Store-product-days with at least one stockout hour",
+        "Result": 1992006
+      },
+      {
+        "Dataset": "Train / Eval",
+        "Check": "Composite keys present in both splits",
         "Result": 0
       }
     ]

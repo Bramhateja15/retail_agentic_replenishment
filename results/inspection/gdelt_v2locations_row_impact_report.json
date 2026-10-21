@@ -1,0 +1,8 @@
+{
+  "generated_at_utc": "2026-10-21T00:19:00.350067+00:00",
+  "files_examined": 412,
+  "rows_examined": 606981,
+  "total_malformed_blocks": 2850,
+  "affected_rows": 307,
+  "affected_row_percentage": 0.0506
+}

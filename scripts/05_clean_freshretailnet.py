@@ -4,7 +4,9 @@ Phase D — Cleaning & standardisation: FreshRetailNet-50K
 Implements the Phase D Cleaning Contract exactly:
   - dt: str -> datetime64[ns], hard failure on any unparseable value
   - hours_sale / hours_stock_status: kept as 24-element arrays, unchanged
-  - discount: values UNCHANGED; new boolean flag discount_above_reference
+  - discount: values UNCHANGED; new boolean flags discount_above_reference
+    (discount > 1.0) and discount_zero (discount == 0.0, a 100% discount,
+    most likely a missing price rather than a free product)
   - Full-dataset (not sampled) structural and cross-field validation
   - No imputation, capping, filtering, aggregation, or feature engineering
   - Row counts must be preserved exactly
@@ -146,11 +148,17 @@ def clean_and_validate_split(name, raw_path):
     # --- discount anomaly: flag, do not alter -------------------------
     above_ref = df["discount"] > 1.0
     df["discount_above_reference"] = above_ref
+    zero_disc = df["discount"] == 0.0
+    df["discount_zero"] = zero_disc
     result["discount_anomaly"] = {
         "above_reference_count": int(above_ref.sum()),
+        "zero_discount_count": int(zero_disc.sum()),
+        "zero_discount_share": round(float(zero_disc.mean()), 6),
         "value_unchanged": True,
         "note": ("Values above the documented 1.0 'no discount' reference are "
-                 "retained unchanged; flagged via discount_above_reference."),
+                 "retained unchanged; flagged via discount_above_reference. "
+                 "Values of exactly 0.0 (a 100% discount) are retained unchanged; "
+                 "flagged via discount_zero for treatment at feature stage."),
     }
 
     # --- row count preservation ------------------------------------
@@ -267,4 +275,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()

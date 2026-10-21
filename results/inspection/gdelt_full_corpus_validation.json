@@ -1,0 +1,258 @@
+{
+  "generated_at_utc": "2026-09-23T23:30:14.049543+00:00",
+  "codebook_source": "http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook-V2.1.pdf",
+  "corpus_summary": {
+    "total_files_examined": 412,
+    "total_rows_examined": 606981,
+    "files_with_any_failure": 134,
+    "files_with_failures_list": [
+      "20240325\\20240325120000.gkg.csv.zip",
+      "20240325\\20240325180000.gkg.csv.zip",
+      "20240327\\20240327000000.gkg.csv.zip",
+      "20240327\\20240327120000.gkg.csv.zip",
+      "20240329\\20240329120000.gkg.csv.zip",
+      "20240329\\20240329180000.gkg.csv.zip",
+      "20240401\\20240401060000.gkg.csv.zip",
+      "20240402\\20240402180000.gkg.csv.zip",
+      "20240403\\20240403180000.gkg.csv.zip",
+      "20240404\\20240404000000.gkg.csv.zip",
+      "20240404\\20240404120000.gkg.csv.zip",
+      "20240404\\20240404180000.gkg.csv.zip",
+      "20240406\\20240406120000.gkg.csv.zip",
+      "20240407\\20240407120000.gkg.csv.zip",
+      "20240408\\20240408060000.gkg.csv.zip",
+      "20240409\\20240409180000.gkg.csv.zip",
+      "20240410\\20240410120000.gkg.csv.zip",
+      "20240411\\20240411120000.gkg.csv.zip",
+      "20240412\\20240412120000.gkg.csv.zip",
+      "20240412\\20240412180000.gkg.csv.zip",
+      "20240413\\20240413120000.gkg.csv.zip",
+      "20240414\\20240414120000.gkg.csv.zip",
+      "20240415\\20240415060000.gkg.csv.zip",
+      "20240415\\20240415120000.gkg.csv.zip",
+      "20240415\\20240415180000.gkg.csv.zip",
+      "20240416\\20240416000000.gkg.csv.zip",
+      "20240416\\20240416060000.gkg.csv.zip",
+      "20240416\\20240416120000.gkg.csv.zip",
+      "20240417\\20240417000000.gkg.csv.zip",
+      "20240417\\20240417060000.gkg.csv.zip",
+      "20240417\\20240417120000.gkg.csv.zip",
+      "20240418\\20240418180000.gkg.csv.zip",
+      "20240419\\20240419180000.gkg.csv.zip",
+      "20240420\\20240420120000.gkg.csv.zip",
+      "20240420\\20240420180000.gkg.csv.zip",
+      "20240423\\20240423180000.gkg.csv.zip",
+      "20240424\\20240424060000.gkg.csv.zip",
+      "20240425\\20240425120000.gkg.csv.zip",
+      "20240425\\20240425180000.gkg.csv.zip",
+      "20240426\\20240426120000.gkg.csv.zip",
+      "20240429\\20240429000000.gkg.csv.zip",
+      "20240429\\20240429120000.gkg.csv.zip",
+      "20240430\\20240430120000.gkg.csv.zip",
+      "20240430\\20240430180000.gkg.csv.zip",
+      "20240501\\20240501060000.gkg.csv.zip",
+      "20240501\\20240501120000.gkg.csv.zip",
+      "20240501\\20240501180000.gkg.csv.zip",
+      "20240502\\20240502000000.gkg.csv.zip",
+      "20240502\\20240502120000.gkg.csv.zip",
+      "20240502\\20240502180000.gkg.csv.zip"
+    ]
+  },
+  "rows_by_file_sample": {
+    "20240325\\20240325000000.gkg.csv.zip": 857,
+    "20240325\\20240325060000.gkg.csv.zip": 920,
+    "20240325\\20240325120000.gkg.csv.zip": 1600,
+    "20240325\\20240325180000.gkg.csv.zip": 2271,
+    "20240326\\20240326000000.gkg.csv.zip": 1660,
+    "20240326\\20240326060000.gkg.csv.zip": 1249,
+    "20240326\\20240326120000.gkg.csv.zip": 1763,
+    "20240326\\20240326180000.gkg.csv.zip": 2382,
+    "20240327\\20240327000000.gkg.csv.zip": 1664,
+    "20240327\\20240327060000.gkg.csv.zip": 1100,
+    "20240327\\20240327120000.gkg.csv.zip": 1789,
+    "20240327\\20240327180000.gkg.csv.zip": 2393,
+    "20240328\\20240328000000.gkg.csv.zip": 1801,
+    "20240328\\20240328060000.gkg.csv.zip": 1192,
+    "20240328\\20240328120000.gkg.csv.zip": 1604,
+    "20240328\\20240328180000.gkg.csv.zip": 2748,
+    "20240329\\20240329000000.gkg.csv.zip": 1613,
+    "20240329\\20240329060000.gkg.csv.zip": 1183,
+    "20240329\\20240329120000.gkg.csv.zip": 1392,
+    "20240329\\20240329180000.gkg.csv.zip": 1975
+  },
+  "checks": {
+    "zip_integrity": {
+      "count": 0,
+      "examples": []
+    },
+    "field_count_27": {
+      "count": 0,
+      "examples": []
+    },
+    "gkgrecordid_empty": {
+      "count": 0,
+      "examples": []
+    },
+    "gkgrecordid_duplicates": {
+      "count": 0,
+      "examples": []
+    },
+    "gkgrecordid_unique_count": 606981,
+    "date_valid_count": 606981,
+    "date_zero_special_case_count": 0,
+    "date_invalid": {
+      "count": 0,
+      "examples": []
+    },
+    "v2tone_structural_failures": {
+      "count": 0,
+      "examples": []
+    },
+    "v2tone_empty_count": 0,
+    "v2tone_out_of_documented_range_examples": {
+      "count": 0,
+      "examples": []
+    },
+    "v2themes_failures": {
+      "count": 0,
+      "examples": []
+    },
+    "v2themes_empty_count": 60239,
+    "v2locations_failures": {
+      "count": 307,
+      "examples": [
+        {
+          "file": "20240325\\20240325120000.gkg.csv.zip",
+          "row_number": 134,
+          "gkgrecordid": "20240325120000-133",
+          "field": "V2Locations",
+          "raw_value": "1#Georgian#GG#GG##42#43.5#GG#479;1#Georgian#GG#GG##42#43.5#GG#875;1#Georgian#GG#GG##42#43.5#GG#1057;1#Georgian#GG#GG##42#43.5#GG#2037;1#Russia#RS#RS##60#100#RS#2128;1#Russia#RS#RS##60#100#RS#2143;1#Hu...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#16'"
+        },
+        {
+          "file": "20240325\\20240325120000.gkg.csv.zip",
+          "row_number": 622,
+          "gkgrecordid": "20240325120000-621",
+          "field": "V2Locations",
+          "raw_value": "4#Tbilisi, Georgia (General), Georgia#GG#GG00#16525#41.725#44.7908#-2330077#7;1#Russian#RS#RS##60#100#RS#441;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#16;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#41;0#Georg...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#16'"
+        },
+        {
+          "file": "20240325\\20240325120000.gkg.csv.zip",
+          "row_number": 902,
+          "gkgrecordid": "20240325120000-901",
+          "field": "V2Locations",
+          "raw_value": "1#Russia#RS#RS##60#100#RS#241;1#Russia#RS#RS##60#100#RS#858;1#Russia#RS#RS##60#100#RS#1341;1#Russia#RS#RS##60#100#RS#1853;1#Russia#RS#RS##60#100#RS#2017;1#Russia#RS#RS##60#100#RS#2280;1#Russia#RS#RS##...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#3198'"
+        },
+        {
+          "file": "20240325\\20240325180000.gkg.csv.zip",
+          "row_number": 2070,
+          "gkgrecordid": "20240325180000-2069",
+          "field": "V2Locations",
+          "raw_value": "1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3083;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3373;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3472;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3618;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#4179;1#Azerbaij...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#182'"
+        },
+        {
+          "file": "20240327\\20240327000000.gkg.csv.zip",
+          "row_number": 618,
+          "gkgrecordid": "20240327000000-617",
+          "field": "V2Locations",
+          "raw_value": "1#Georgian#GG#GG##42#43.5#GG#2375;1#Soviet#RS#RS##60#100#RS#2441;1#Czech Republic#EZ#EZ##49.75#15#EZ#1472;1#German#GM#GM##51.5#10.5#GM#1510;1#Iceland#IC#IC##65#-18#IC#215;1#Iceland#IC#IC##65#-18#IC#19...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#17'"
+        },
+        {
+          "file": "20240327\\20240327000000.gkg.csv.zip",
+          "row_number": 1559,
+          "gkgrecordid": "20240327000000-1558",
+          "field": "V2Locations",
+          "raw_value": "1#Romania#RO#RO##46#25#RO#1809;1#Romania#RO#RO##46#25#RO#2656;1#Poland#PL#PL##52#20#PL#27;1#Poland#PL#PL##52#20#PL#171;1#Poland#PL#PL##52#20#PL#657;1#Poland#PL#PL##52#20#PL#1340;1#Poland#PL#PL##52#20#...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#18'"
+        },
+        {
+          "file": "20240327\\20240327120000.gkg.csv.zip",
+          "row_number": 485,
+          "gkgrecordid": "20240327120000-484",
+          "field": "V2Locations",
+          "raw_value": "5#Abkhazia, Abkhazia**, Georgia#GG#GG02#16451#42.7908#41.1599#10007258#1572;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#549;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#1441;0#Georgia, , Georgia#GG#GG##42#.5#1#G...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#549'"
+        },
+        {
+          "file": "20240329\\20240329120000.gkg.csv.zip",
+          "row_number": 1287,
+          "gkgrecordid": "20240329120000-1286",
+          "field": "V2Locations",
+          "raw_value": "4#Tbilisi, Georgia (General), Georgia#GG#GG00#16525#41.725#44.7908#-2330077#250;1#Poland#PL#PL##52#20#PL#1942;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#233;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#259;0#Ge...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#233'"
+        },
+        {
+          "file": "20240329\\20240329180000.gkg.csv.zip",
+          "row_number": 1840,
+          "gkgrecordid": "20240329180000-1839",
+          "field": "V2Locations",
+          "raw_value": "0#Georgia, , Georgia#GG#GG##42#.5#1#GG#270;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#318;5#Abkhazia, Abkhazia**, Georgia#GG#GG02#16451#42.7908#41.1599#10007258#261",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#270'"
+        },
+        {
+          "file": "20240401\\20240401060000.gkg.csv.zip",
+          "row_number": 305,
+          "gkgrecordid": "20240401060000-304",
+          "field": "V2Locations",
+          "raw_value": "1#India#IN#IN##20#77#IN#5897;1#United States#US#US##39.828175#-98.5795#US#2325;1#United States#US#US##39.828175#-98.5795#US#3451;1#United States#US#US##39.828175#-98.5795#US#6240;1#Cuba#CU#CU##22#-79....",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#4621'"
+        },
+        {
+          "file": "20240401\\20240401060000.gkg.csv.zip",
+          "row_number": 865,
+          "gkgrecordid": "20240401060000-864",
+          "field": "V2Locations",
+          "raw_value": "1#Iran#IR#IR##32#53#IR#795;1#Soviet#RS#RS##60#100#RS#3327;1#Soviet#RS#RS##60#100#RS#4368;1#Soviet#RS#RS##60#100#RS#5487;1#Soviet#RS#RS##60#100#RS#6119;1#Iranian#IR#IR##32#53#IR#1144;1#Georgian#GG#GG##...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#260'"
+        },
+        {
+          "file": "20240402\\20240402180000.gkg.csv.zip",
+          "row_number": 771,
+          "gkgrecordid": "20240402180000-770",
+          "field": "V2Locations",
+          "raw_value": "1#Cuba#CU#CU##22#-79.5#CU#133;1#Cuba#CU#CU##22#-79.5#CU#950;1#Cuba#CU#CU##22#-79.5#CU#1646;1#Cuba#CU#CU##22#-79.5#CU#2248;1#Cuba#CU#CU##22#-79.5#CU#2555;0#Georgia, , Georgia#GG#GG##42#.5#1#GG#880;0#Ge...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#880'"
+        },
+        {
+          "file": "20240403\\20240403180000.gkg.csv.zip",
+          "row_number": 187,
+          "gkgrecordid": "20240403180000-186",
+          "field": "V2Locations",
+          "raw_value": "4#Aktau, Mangghystau, Kazakhstan#KZ#KZ09#37263#43.65#51.2#-2334223#2156;4#Shalkar, Aqmola, Kazakhstan#KZ#KZ03#37174#50.8442#70.8282#-2347483#2912;4#Horgos, Xinjiang, China#CH#CH13#13292#44.1256#80.414...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#3833'"
+        },
+        {
+          "file": "20240403\\20240403180000.gkg.csv.zip",
+          "row_number": 774,
+          "gkgrecordid": "20240403180000-773",
+          "field": "V2Locations",
+          "raw_value": "1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#806;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3389;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3581;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3600;1#Azerbaijan#AJ#AJ##40.5#47.5#AJ#3673;1#Azerbaija...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#818'"
+        },
+        {
+          "file": "20240404\\20240404000000.gkg.csv.zip",
+          "row_number": 110,
+          "gkgrecordid": "20240404000000-109",
+          "field": "V2Locations",
+          "raw_value": "3#Washington, Washington, United States#US#USDC#DC001#38.8951#-77.0364#531871#3513;3#Washington, Washington, United States#US#USDC#DC001#38.8951#-77.0364#531871#3632;4#Tbilisi, Georgia (General), Geor...",
+          "failure_reason": "expected 9 '#'-delimited fields, got 10: '0#Georgia, , Georgia#GG#GG##42#.5#1#GG#5647'"
+        }
+      ]
+    },
+    "v2locations_empty_count": 152143,
+    "v2persons_failures": {
+      "count": 0,
+      "examples": []
+    },
+    "v2persons_empty_count": 144394,
+    "v2organizations_failures": {
+      "count": 0,
+      "examples": []
+    },
+    "v2organizations_empty_count": 171743
+  }
+}

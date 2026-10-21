@@ -1,18 +1,32 @@
-from pathlib import Path
+"""
+Phase F (pre-check) — Data quality profile of the cleaned datasets
+
+Read-only profiling of data/cleaned/. Prints summary tables in the
+terminal and saves results/data_quality/data_quality_report.json.
+
+Run (from any folder):
+    python scripts/08_show_data_quality.py
+"""
+
 import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 import pandas as pd
+
+from config.paths import CLEANED_DIR, DATA_QUALITY_DIR, ensure_dirs
 
 
 # =========================================================
 # PROJECT PATHS
 # =========================================================
 
-ROOT = Path(__file__).resolve().parents[1]
+ensure_dirs()
 
-CLEANED = ROOT / "data" / "cleaned"
-OUTPUT = ROOT / "results" / "data_quality"
-
-OUTPUT.mkdir(parents=True, exist_ok=True)
+CLEANED = CLEANED_DIR
+OUTPUT = DATA_QUALITY_DIR
 
 
 # =========================================================
@@ -197,6 +211,38 @@ fresh_validation = pd.DataFrame([
         "Eval",
         "Discount > 1.0",
         int((eval_df["discount"] > 1).sum())
+    ],
+    [
+        "Train",
+        "Discount == 0.0 (flagged, likely missing)",
+        int((train["discount"] == 0).sum())
+    ],
+    [
+        "Eval",
+        "Discount == 0.0 (flagged, likely missing)",
+        int((eval_df["discount"] == 0).sum())
+    ],
+    [
+        "Train",
+        "Stockout hours != sum of hourly flags (6-22)",
+        int(
+            (train["hours_stock_status"].map(lambda a: int(sum(a[6:22])))
+             != train["stock_hour6_22_cnt"]).sum()
+        )
+    ],
+    [
+        "Train",
+        "Store-product-days with at least one stockout hour",
+        int((train["stock_hour6_22_cnt"] > 0).sum())
+    ],
+    [
+        "Train / Eval",
+        "Composite keys present in both splits",
+        int(
+            train[["city_id", "store_id", "product_id", "dt"]]
+            .merge(eval_df[["city_id", "store_id", "product_id", "dt"]])
+            .shape[0]
+        )
     ],
 ], columns=[
     "Dataset",
@@ -389,4 +435,4 @@ print_table(
 print("\n" + "=" * 100)
 print("DATA QUALITY REPORT SAVED")
 print("=" * 100)
-print(output_file)
+print(output_file)
